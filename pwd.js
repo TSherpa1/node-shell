@@ -1,8 +1,7 @@
-const pwd = (cmd) => {
+const pwd = (cmd, done) => {
     if (cmd === 'pwd') {
         //get working directory and log
-        process.stdout.write(process.cwd());
-        process.stdout.write('\npromt > ');
+        done(process.cwd());
     }
 }
 
